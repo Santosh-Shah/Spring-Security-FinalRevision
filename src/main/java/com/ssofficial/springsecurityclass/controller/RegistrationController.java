@@ -1,15 +1,27 @@
 package com.ssofficial.springsecurityclass.controller;
 
+//import com.ssofficial.springsecurityclass.entity.User;
+//import com.ssofficial.springsecurityclass.event.RegistrationCompleteEvent;
+//import com.ssofficial.springsecurityclass.model.UserModel;
+//import com.ssofficial.springsecurityclass.service.UserService;
+//import jakarta.servlet.http.HttpServletRequest;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.context.ApplicationEventPublisher;
+//import org.springframework.web.bind.annotation.PostMapping;
+//import org.springframework.web.bind.annotation.RequestBody;
+//import org.springframework.web.bind.annotation.RestController;
+
 import com.ssofficial.springsecurityclass.entity.User;
 import com.ssofficial.springsecurityclass.event.RegistrationCompleteEvent;
 import com.ssofficial.springsecurityclass.model.UserModel;
 import com.ssofficial.springsecurityclass.service.UserService;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class RegistrationController {
@@ -29,6 +41,7 @@ public class RegistrationController {
         ));
         return "Success";
     }
+
 
     private String applicationUrl(HttpServletRequest request) {
         return "http://" +
